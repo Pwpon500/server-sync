@@ -9,6 +9,8 @@ call("ln -s ~/server-sync/vim ~/.vim", shell=True)
 call("echo source ~/server-sync/config.fish > ~/.config/fish/config.fish", shell=True)
 call("echo source ~/server-sync/fish_prompt.fish > ~/.config/fish/functions/fish_prompt.fish", shell=True)
 
+call("ln -s ~/server-sync/taskrc ~/.taskrc", shell=True)
+
 call("echo \". ~/server-sync/bash_aliases\" > ~/.bash_aliases", shell=True)
 if os.path.isfile("~/.bashrc"):
     bashrc_content = open("~/.bashrc", "r").read()
