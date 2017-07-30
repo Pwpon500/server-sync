@@ -9,11 +9,11 @@ server_type = raw_input("Is this a kvm host? (y/n)")
 if server_type == "y":
     packages += kvm_packages
 
-call("apt-get install vim fish figlet vlan bridge-utils tcpdump mdadm -y", shell=True)
+Call("apt-get install vim fish figlet vlan bridge-utils tcpdump mdadm -y", shell=True)
 call("echo \"source ~/server-sync/vimrc\" > ~/.vimrc", shell=True)
 call("ln -s ~/server-sync/vim ~/.vim", shell=True)
 
-call("mkdir ~/.config/fish", shell=True)
+call("mkdir -p ~/.config/fish", shell=True)
 call("echo source ~/server-sync/config.fish > ~/.config/fish/config.fish", shell=True)
 
 call("ln -s ~/server-sync/taskrc ~/.taskrc", shell=True)
